@@ -1,0 +1,53 @@
+@use '../sass/mixins.scss';
+
+.hamburger-mobile-icon {
+  z-index: 30;
+  @include mixins.mq(medium) {
+    display: none;
+  }
+  &:focus {
+    outline: dotted 5px #ffd60a;
+    outline-offset: 1rem;
+  }
+
+  & span {
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 1.5rem;
+      height: 3px;
+      background-color: black;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -10px;
+      left: 0;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 10px;
+      left: 0;
+    }
+  }
+  &.menu-close {
+    & span::before {
+      top: 0;
+      transform: rotate(45deg);
+      background-color: #fff;
+    }
+    & span {
+      background-color: transparent;
+    }
+    & span::after {
+      top: 0;
+      transform: rotate(-45deg);
+      background-color: #fff;
+    }
+  }
+}

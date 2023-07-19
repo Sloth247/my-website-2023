@@ -1,0 +1,31 @@
+@use '../sass/mixins.scss';
+@use '../sass/variables.scss';
+
+.footer {
+  background-color: variables.$color-gray-bg;
+  padding: 1rem 5% 1rem 5%;
+  @include mixins.mq(medium) {
+    padding: 1rem 5rem 2rem 5rem;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__copyrights {
+    text-align: center;
+    font-weight: variables.$font-weight-bold;
+    margin-top: 1rem;
+  }
+}
+.img-container {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  &:last-child {
+    width: 2.3rem;
+  }
+}

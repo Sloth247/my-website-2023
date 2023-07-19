@@ -1,0 +1,168 @@
+@use '../sass/mixins.scss';
+@use '../sass/variables.scss';
+
+.main__portfolio {
+  padding: 4rem 5%;
+  background-color: variables.$color-dark-blue;
+  color: #fff;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transform: translateY(-2rem);
+  margin-bottom: -2.5rem;
+  z-index: -3;
+
+  @include mixins.mq(medium) {
+    padding: 6rem 5%;
+    margin-bottom: -2rem;
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include mixins.mq(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      gap: 2rem;
+    }
+    @include mixins.mq(large) {
+      grid-column-gap: 4rem;
+      grid-row-gap: 4rem;
+    }
+  }
+
+  &--title {
+    margin-bottom: 3rem;
+    @include mixins.mq(medium) {
+      margin-bottom: 4rem;
+    }
+    &::before {
+      display: block;
+      content: '';
+      margin-top: -8rem;
+      height: 8rem;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  &--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem 2rem 1rem 2rem;
+    line-height: 1.8;
+    border: 3px solid #fff;
+    box-shadow: 10px 10px;
+    @include mixins.mq(medium) {
+      padding: 3rem 3rem;
+    }
+
+    &-title {
+      font-weight: variables.$font-weight-bold;
+      font-size: 1.1rem;
+      position: relative;
+      text-align: left;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      outline: none;
+      display: flex;
+      align-items: center;
+      @include mixins.mq(medium) {
+        font-size: 1.4rem;
+      }
+      & span {
+        margin-right: 0.5rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 15px;
+        width: 0;
+        opacity: 0.7;
+        background: variables.$color-yellow-bg;
+        background: variables.$color-mild-pink;
+        transition: none;
+      }
+      &:focus,
+      &:hover {
+        outline: none;
+        &:after {
+          width: 100%;
+          transition: all 0.5s ease-in;
+          -webkit-transition: all 0.5s ease-in;
+          -moz-transition: all 0.5s ease-in;
+          -ms-transition: all 0.5s ease-in;
+          -o-transition: all 0.5s ease-in;
+        }
+      }
+    }
+  }
+  &--content {
+    align-self: start;
+  }
+  & img {
+    object-fit: scale-down;
+    // border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 26rem;
+    height: 15rem;
+  }
+  &--btn {
+    align-self: end;
+    position: relative;
+    font-weight: variables.$font-weight-bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    margin-top: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      height: 15px;
+      width: 0;
+      opacity: 0.7;
+      background: variables.$color-yellow-bg;
+      background: variables.$color-mild-pink;
+      transition: none;
+    }
+    &:focus,
+    &:hover {
+      outline: none;
+      transform: translateY(-0.1rem);
+      &:after {
+        width: 100%;
+        transition: all 0.5s ease-in;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+      }
+    }
+  }
+}
+.github-icon {
+  margin-left: 1rem;
+}
+.fem-link {
+  position: relative;
+  font-weight: bold;
+  text-decoration: underline solid 2px #fff;
+}
+.keyTech {
+  &--bold {
+    font-weight: bold;
+  }
+}
