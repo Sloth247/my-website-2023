@@ -41,6 +41,9 @@ const skills = [
   },
   {
     name: 'GitHub',
-    image: '/images/icon-github.svg',
+    image:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
   },
 ];
+
+export default skills;

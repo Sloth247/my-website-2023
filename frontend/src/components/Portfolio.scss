@@ -2,20 +2,28 @@
 @use '../sass/variables.scss';
 
 .main__portfolio {
-  padding: 4rem 5%;
+  padding: 4rem 1.5rem;
   background-color: variables.$color-dark-blue;
   color: #fff;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  transform: translateY(-2rem);
-  margin-bottom: -2.5rem;
-  z-index: -3;
 
   @include mixins.mq(medium) {
-    padding: 6rem 5%;
-    margin-bottom: -2rem;
+    padding: 6rem;
   }
 
+  @include mixins.mq(large) {
+    padding: 8rem;
+  }
+
+  &--img-container {
+    min-height: 10rem;
+    margin-bottom: 1rem;
+    @include mixins.mq(medium) {
+      min-height: 18rem;
+    }
+    & img {
+      width: 100%;
+    }
+  }
   &--container {
     display: flex;
     flex-direction: column;
@@ -33,27 +41,9 @@
     }
   }
 
-  &--title {
-    margin-bottom: 3rem;
-    @include mixins.mq(medium) {
-      margin-bottom: 4rem;
-    }
-    &::before {
-      display: block;
-      content: '';
-      margin-top: -8rem;
-      height: 8rem;
-      visibility: hidden;
-      pointer-events: none;
-    }
-  }
-
   &--item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    padding: 2rem 2rem 1rem 2rem;
+    display: grid;
+    padding: 2rem 2.5rem;
     line-height: 1.8;
     border: 3px solid #fff;
     box-shadow: 10px 10px;
@@ -65,7 +55,7 @@
       font-weight: variables.$font-weight-bold;
       font-size: 1.1rem;
       position: relative;
-      text-align: left;
+      text-align: center;
       margin-top: 1rem;
       margin-bottom: 1rem;
       outline: none;
@@ -108,20 +98,13 @@
   &--content {
     align-self: start;
   }
-  & img {
-    object-fit: scale-down;
-    // border-radius: 0.8rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    max-width: 26rem;
-    height: 15rem;
-  }
+
   &--btn {
-    align-self: end;
-    position: relative;
-    font-weight: variables.$font-weight-bold;
+    justify-self: end;
     display: flex;
     align-items: center;
+    position: relative;
+    font-weight: variables.$font-weight-bold;
     transition: all 0.2s ease-in;
     margin-top: 1rem;
 
@@ -156,13 +139,20 @@
 .github-icon {
   margin-left: 1rem;
 }
-.fem-link {
-  position: relative;
-  font-weight: bold;
-  text-decoration: underline solid 2px #fff;
-}
+
 .keyTech {
   &--bold {
     font-weight: bold;
+  }
+}
+
+.title {
+  margin-bottom: 3rem;
+
+  @include mixins.mq(medium) {
+    margin-bottom: 4rem;
+  }
+  @include mixins.mq(medium) {
+    margin-bottom: 8rem;
   }
 }

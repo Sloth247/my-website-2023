@@ -2,10 +2,10 @@ import './About.scss';
 
 export default function About() {
   return (
-    <section className="main__about wrapper" id="about">
+    <section className="main__about" id="about">
       <div className="main__about--inner">
-        <h2 className="main__about--title">About Me</h2>
-        <div className="main__about-img-container">
+        <h2 className="title">About Me</h2>
+        <div className="main__about--img-container">
           <img
             src="/images/coding-woman.svg"
             alt=""
@@ -20,7 +20,7 @@ export default function About() {
           something I prioritize in all of my work. Accessibility is also a key
           focus for me, as I believe in making the internet open to everyone. My
           strengths lie in my flexibility, as I am eager to take on new
-          challenges and meet the targets set by my clients..
+          challenges and meet the targets set by my clients.
         </p>
       </div>
     </section>

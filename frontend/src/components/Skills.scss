@@ -3,42 +3,29 @@
 
 .main {
   &__skills {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    margin-bottom: -3rem;
+    padding: 4rem 1.5rem;
     background-color: variables.$color-beige-bg;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    transform: translateY(-3rem);
-    min-height: 100vh;
+
+    @include mixins.mq(medium) {
+      padding: 6rem;
+    }
 
     @include mixins.mq(large) {
-      padding-top: 6rem;
-      margin-bottom: -8rem;
-      padding-bottom: 8rem;
-      transform: translateY(-8rem);
+      padding: 8rem;
     }
 
     &--container {
-      display: grid;
-      place-content: center;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-items: center;
+      justify-content: center;
       text-align: center;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 6rem;
-
-      @include mixins.mq(medium) {
-        margin-top: 6rem;
-      }
+      gap: 3rem;
+      margin-top: 3rem;
 
       @include mixins.mq(large) {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-row-gap: 6rem;
-        margin-top: 10rem;
+        margin-top: 8rem;
+        gap: 5rem;
       }
     }
 
@@ -46,31 +33,17 @@
       width: 4rem;
 
       @include mixins.mq(large) {
-        width: 6rem;
+        width: 8rem;
       }
     }
     &--name {
       margin-top: 0.5rem;
       font-weight: variables.$font-weight-medium;
+
       @include mixins.mq(large) {
         font-size: 1.5rem;
         margin-top: 1rem;
       }
-    }
-  }
-}
-.title {
-  &::before {
-    display: block;
-    content: '';
-    visibility: hidden;
-    pointer-events: none;
-    margin-top: -8rem;
-    height: 8rem;
-
-    @include mixins.mq(medium) {
-      margin-top: -10rem;
-      height: 10rem;
     }
   }
 }

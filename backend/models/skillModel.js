@@ -4,7 +4,7 @@ const SkillSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, 'Please add a title'],
+      required: true,
       trim: true,
       maxlength: [50, 'name can not be more than 50 characters'],
     },

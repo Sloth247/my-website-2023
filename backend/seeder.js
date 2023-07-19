@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import projects from './_data/projects.js';
 import users from './_data/users.js';
+import skills from './_data/skills.js';
 
 import Project from './models/projectModel.js';
 import User from './models/userModel.js';
@@ -29,7 +30,7 @@ const importData = async () => {
 
     await Project.insertMany(sampleProjects);
 
-    const sampleSkills = projects.map((skill) => {
+    const sampleSkills = skills.map((skill) => {
       return { ...skill, user: adminUser };
     });
 

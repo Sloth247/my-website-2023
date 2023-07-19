@@ -1,3 +1,5 @@
+import './Hamburger.scss';
+
 export default function Hamburger({ mobileExpanded, handleButtonClick }) {
   return (
     <button

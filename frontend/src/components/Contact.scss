@@ -16,10 +16,14 @@
   max-width: 25rem;
   margin: 0 auto;
   color: variables.$color-black;
+  @include mixins.mq(large) {
+    padding: 4rem 4rem;
+  }
 }
 
-.title {
-  margin-bottom: 2rem;
+.contact__title {
+  font-size: 2rem;
+  margin-bottom: 4rem;
 }
 
 .texts {

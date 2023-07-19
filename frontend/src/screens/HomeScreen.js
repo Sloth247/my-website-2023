@@ -2,13 +2,14 @@ import React from 'react';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
+import Portfolio from '../components/Portfolio';
 
-const HomeScreen = () => {
+const HomeScreen = ({ skills, projects }) => {
   return (
     <>
       <About />
-      <Skills />
-      <Portfolio />
+      <Skills skills={skills} />
+      <Portfolio projects={projects} />
       <Contact />
     </>
   );

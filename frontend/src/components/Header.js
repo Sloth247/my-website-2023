@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Hamburger from './Hamburger';
-
-import Logo from '../public/img/logo.svg';
+import './Header.scss';
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -19,23 +18,12 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="header__nav wrapper">
-        <Link href="/">
-          <a>
-            <h1 className="header__nav--logo">
-              <span className="sr-only">Yuko Horita Fullstack Developer</span>
-              <div className="logo-container">
-                <Image
-                  src={Logo}
-                  alt="Yuko Horita"
-                  layout="fill"
-                  objectFit="cover"
-                  // width={56}
-                  // height={56}
-                  // position="relative"
-                />
-              </div>
-            </h1>
-          </a>
+        <Link to="/">
+          <h1 className="header__nav--logo">
+            <div className="header__nav--logo-container">
+              <img src="/images/logo.svg" alt="Yuko Horita" />
+            </div>
+          </h1>
         </Link>
 
         <div className="header__nav--menu-container">
@@ -48,28 +36,28 @@ export default function Header() {
             id="mobile-menu"
           >
             <li className="header__nav--about">
-              <Link to="/#about">
+              <Link to="#about">
                 <a className="header__nav--link" onClick={handleClose}>
                   About Me
                 </a>
               </Link>
             </li>
             <li className="header__nav--skills">
-              <Link href="/#skills">
+              <Link to="#skills">
                 <a className="header__nav--link" onClick={handleClose}>
                   Skills
                 </a>
               </Link>
             </li>
             <li className="header__nav--portfolio">
-              <Link href="/#portfolio">
+              <Link to="/#portfolio">
                 <a className="header__nav--link" onClick={handleClose}>
                   Projects
                 </a>
               </Link>
             </li>
             <li className="header__nav--contact">
-              <Link href="/#contact">
+              <Link to="/#contact">
                 <a className="header__nav--link" onClick={handleClose}>
                   Contact
                 </a>

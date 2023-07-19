@@ -18,7 +18,7 @@ import {
   SKILL_UPDATE_FAIL,
 } from '../constants/skillConstants';
 
-export const listSkill = () => async (dispatch) => {
+export const listSkills = () => async (dispatch) => {
   try {
     dispatch({ type: SKILL_LIST_REQUEST });
 

@@ -6,7 +6,7 @@ export default function contact() {
   return (
     <section className="container" id="contact">
       <div className="inner">
-        <h2 className="title">Get In Touch</h2>
+        <h2 className="contact__title">Get In Touch</h2>
         <div className="texts">
           <p className="open">I&apos;m open for chat!</p>
           <a href="mailto:yukohorita@outlook.com" className={''.item}>

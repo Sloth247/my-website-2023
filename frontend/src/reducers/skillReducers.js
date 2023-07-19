@@ -25,7 +25,7 @@ export const skillListReducer = (state = { skills: [] }, action) => {
     case SKILL_LIST_SUCCESS:
       return {
         loading: false,
-        skills: action.payload.skills,
+        skills: action.payload,
       };
     case SKILL_LIST_FAIL:
       return { loading: false, error: action.payload };
