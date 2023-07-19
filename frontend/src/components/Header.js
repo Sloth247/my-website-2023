@@ -36,68 +36,47 @@ export default function Header() {
             id="mobile-menu"
           >
             <li className="header__nav--about">
-              <Link to="#about">
-                <a className="header__nav--link" onClick={handleClose}>
-                  About Me
-                </a>
+              <Link
+                to="#about"
+                className="header__nav--link"
+                onClick={handleClose}
+              >
+                About Me
               </Link>
             </li>
             <li className="header__nav--skills">
-              <Link to="#skills">
-                <a className="header__nav--link" onClick={handleClose}>
-                  Skills
-                </a>
+              <Link
+                to="#skills"
+                className="header__nav--link"
+                onClick={handleClose}
+              >
+                Skills
               </Link>
             </li>
             <li className="header__nav--portfolio">
-              <Link to="/#portfolio">
-                <a className="header__nav--link" onClick={handleClose}>
-                  Projects
-                </a>
+              <Link
+                to="/#portfolio"
+                className="header__nav--link"
+                onClick={handleClose}
+              >
+                Projects
               </Link>
             </li>
             <li className="header__nav--contact">
-              <Link to="/#contact">
-                <a className="header__nav--link" onClick={handleClose}>
-                  Contact
-                </a>
+              <Link
+                to="/#contact"
+                className="header__nav--link"
+                onClick={handleClose}
+              >
+                Contact
               </Link>
             </li>
           </ul>
           <div className="header__icon-container">
-            {/* <button
-              className={""['header__nav--language-icon']}
-              aria-labelledby="language-switcher"
-              aria-expanded="false"
-              aria-controls="language-menu"
-            >
-              <h2 className="sr-only" id="language-switcher">
-                Language switcher
-              </h2>
-              <i
-                className={`fas fa-globe ${""['header__nav--language-img']}`}
-                aria-hidden="true"
-              ></i>
-            </button> */}
             <Hamburger
               mobileExpanded={mobileExpanded}
               handleButtonClick={handleButtonClick}
             />
-            {/* <ul
-              className={""['header__nav--language-modal']}
-              id="language-menu"
-            >
-              <li>
-                <Link href="/">
-                  <a>English</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>Japanese</a>
-                </Link>
-              </li>
-            </ul> */}
           </div>
         </div>
         <div
