@@ -11,7 +11,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.scss';
 
-const HomeScreen = lazy(() => './screens/HomeScreen');
+const HomeScreen = lazy(() => import('./screens/HomeScreen'));
 
 function App() {
   const dispatch = useDispatch();
