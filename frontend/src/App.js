@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,9 +8,10 @@ import { listSkills } from './actions/skillActions';
 import ScrollToHashElement from './components/ScrollToHashElement';
 
 import Header from './components/Header';
-import HomeScreen from './screens/HomeScreen';
 import Footer from './components/Footer';
 import './App.scss';
+
+const HomeScreen = lazy(() => './screens/HomeScreen');
 
 function App() {
   const dispatch = useDispatch();

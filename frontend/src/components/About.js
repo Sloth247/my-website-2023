@@ -14,7 +14,7 @@ export default function About() {
           />
         </div>
         <p className="main__about--description">
-          Hi 👋 there, I&apos;m Yuko Horita and and I appreciate you visiting my
+          Hi 👋 there, I&apos;m Yuko Horita and I appreciate you visiting my
           website. I am a self-taught full-stack developer who is passionate
           about continually improving my skills. Attention to detail is
           something I prioritize in all of my work. Accessibility is also a key
